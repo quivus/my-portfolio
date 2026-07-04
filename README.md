@@ -1,16 +1,72 @@
-# React + Vite
+# Ime
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website, built to showcase software development projects, technical skills, and experiences. The site includes an animated splash screen, a sticky navigation bar, a project showcase with live demos and downloadable builds, and a downloadable CV.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The portfolio opens with a brief splash screen introduction before loading the main site. Visitors can browse featured projects, each presented with a media preview (image or video), a description, the technologies used, and links to the live application, downloadable APK, and source code where available.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Animated splash screen shown on initial load
+- Sticky, responsive navigation bar with section links (Home, Projects, Services, Contact)
+- Project showcase with independent expand/collapse behavior per project card
+- Inline video previews with a full-size viewing mode
+- Direct links to live websites, downloadable APK builds, and source code repositories
+- Downloadable CV (PDF)
+- Dark mode support (Adapts on system mode)
+- Built with React and Tailwind CSS
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Tailwind CSS
+- JavaScript (JSX)
+
+## Project Structure
+
+```
+ime-portfolio/
+├── public/
+│   └── cv.pdf
+├── src/
+│   ├── assets/
+│   │   ├── images/
+│   │   └── videos/
+│   ├── components/
+│   │   ├── SplashScreen.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── Hero.jsx
+│   │   └── Home.jsx
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+└── README.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or later recommended)
+- npm or yarn
+
+### Installation
+
+```bash
+git clone https://github.com/quivus/Ime.git
+cd ime
+npm install
+```
+
+### Running Locally
+
+```bash
+npm run dev
+```
+
+### Building for Production
+
+```bash
+npm run build
+```
