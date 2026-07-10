@@ -195,11 +195,11 @@ function Hero() {
         "role-based access, a real-time dashboard, automated budget allocation, and strict expense tracking.",
         "offline-first application",
       ],
-      tech: ["Flutter"],
+      tech: ["Flutter", "Dart", ],
       image: csoImage,
       video: csoVideo,
       apkUrl:
-        "https://drive.google.com/file/d/16T7R9dfP3vlju1GEnv_8TzGBJhhaTqtR/view?usp=drive_link",
+        "https://drive.google.com/file/d/1KkeuRCZE9R4xRzZnnEu_jYGX4XQ0B7YY/view?usp=drive_link",
       codeUrl: "https://github.com/quivus/cso-finance",
     },
     {
@@ -252,13 +252,13 @@ function Hero() {
         "live countdowns",
         "smooth unlock animations",
       ],
-      tech: ["Flutter", "React", "Firebase"],
+      tech: ["Flutter", "React", "Firebase", "Figma"],
       image: gratiImage,
       video: null,
       websiteUrl: "",
       apkUrl:
         "",
-      codeUrl: "",
+      codeUrl: "https://github.com/quivus/gratitude-capsule.git",
     },
   ];
 
