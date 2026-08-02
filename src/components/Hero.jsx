@@ -396,7 +396,7 @@ function Hero() {
               return (
                 <div
                   key={work.id}
-                  className="group flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-shadow duration-300 hover:shadow-lg dark:border-neutral-100 dark:bg-neutral-150"
+                  className="group flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-shadow duration-300 hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-900"
                 >
                   <div className="relative">
                     <button
