@@ -147,7 +147,7 @@ function Hero() {
     },
     {
       name: "Gmail",
-      url: "mailto:v.rajiemae.v@gmail.com",
+      url: "https://mail.google.com/mail/?view=cm&fs=1&to=v.rajiemae.v@gmail.com&su=&body=&bcc=",
       label: "v.rajiemae.v@gmail.com",
       brandClass: "hover:border-red-500 hover:text-red-500 hover:bg-red-500/5",
       icon: (
