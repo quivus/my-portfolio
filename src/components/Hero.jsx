@@ -4,9 +4,10 @@ import imeLogo from "../assets/images/ImeLogo.png";
 import csoImage from "../assets/images/CSO.png";
 import clinicImage from "../assets/images/Clinic.png";
 import gratiImage from "../assets/images/Grati.png";
+import idFrontImage from "../assets/images/ID_FRONT.png";
+import idBackImage from "../assets/images/ID_BACK.png";
 import csoVideo from "../assets/videos/CSOFinance.mp4";
-
-const GITHUB_REPOS_URL = "https://github.com/quivus?tab=repositories";
+import gratitudeVideo from "../assets/videos/gratitudevideo.mp4";
 
 const truncateText = (text, limit) => {
   if (text.length <= limit) return { short: text, rest: "" };
@@ -195,7 +196,7 @@ function Hero() {
         "role-based access, a real-time dashboard, automated budget allocation, and strict expense tracking.",
         "offline-first application",
       ],
-      tech: ["Flutter", "Dart", ],
+      tech: ["Flutter", "Dart"],
       image: csoImage,
       video: csoVideo,
       apkUrl:
@@ -254,10 +255,9 @@ function Hero() {
       ],
       tech: ["Flutter", "React", "Firebase", "Figma"],
       image: gratiImage,
-      video: null,
+      video: gratitudeVideo,
       websiteUrl: "",
-      apkUrl:
-        "",
+      apkUrl: "",
       codeUrl: "https://github.com/quivus/gratitude-capsule.git",
     },
   ];
@@ -366,21 +366,10 @@ function Hero() {
         className="border-b border-slate-200/60 dark:border-neutral-900/60"
       >
         <div className=" mx-auto max-w-6xl px-6 py-20 md:py-28">
-          <div className="flex items-baseline justify-between border-b border-slate-100 pb-4 dark:border-neutral-900/40">
+          <div className="border-b border-slate-100 pb-4 dark:border-neutral-900/40">
             <h2 className="font-mono text-[10px] font-bold tracking-[0.3em] uppercase text-slate-400 dark:text-neutral-500">
-              SELECTED WORKS
+              PROGRAMMING
             </h2>
-            <a
-              href={GITHUB_REPOS_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="group inline-flex items-center gap-1.5 font-mono text-[10px] font-bold tracking-widest text-slate-400 uppercase transition-colors hover:text-red-600 dark:text-neutral-500 dark:hover:text-red-500"
-            >
-              View All Projects
-              <span className="transition-transform duration-300 group-hover:translate-x-1">
-                &rarr;
-              </span>
-            </a>
           </div>
 
           <div className="mt-1 grid grid-cols-1 gap-8 md:grid-cols-3 items-start">
@@ -542,20 +531,69 @@ function Hero() {
         </div>
       </section>
 
+      <section className="border-b border-slate-200/60 dark:border-neutral-900/60">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+          <div className="border-b border-slate-100 pb-4 dark:border-neutral-900/40">
+            <h2 className="font-mono text-[10px] font-bold tracking-[0.3em] uppercase text-slate-400 dark:text-neutral-500">
+              CANVA / GRAPHICS
+            </h2>
+          </div>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <div className="flex min-h-[320px] flex-col overflow-hidden rounded-2xl border border-slate-100 bg-slate-50/70 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
+              <div className="flex flex-1 items-center justify-center bg-slate-50/80 p-6 dark:bg-neutral-950/60">
+                <img
+                  src={imeLogo}
+                  alt="Official Ime Logo"
+                  className="h-36 w-auto max-w-full object-contain"
+                />
+              </div>
+              <div className="flex items-center p-6">
+                <h3 className="font-serif text-sm font-semibold tracking-tight text-slate-900 dark:text-white sm:text-base">
+                  OFFICIAL IME LOGO
+                </h3>
+              </div>
+            </div>
+
+            <div className="flex min-h-[320px] flex-col overflow-hidden rounded-2xl border border-slate-100 bg-slate-50/70 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
+              <div className="flex flex-1 items-center justify-center bg-slate-50/80 p-6 dark:bg-neutral-950/60">
+                <div className="grid w-full gap-4 md:grid-cols-2">
+                  <img
+                    src={idFrontImage}
+                    alt="Official CSO Officers ID Front"
+                    className="h-40 w-full rounded-xl object-contain"
+                  />
+                  <img
+                    src={idBackImage}
+                    alt="Official CSO Officers ID Back"
+                    className="h-40 w-full rounded-xl object-contain"
+                  />
+                </div>
+              </div>
+              <div className="flex items-center p-6">
+                <h3 className="font-serif text-sm font-semibold tracking-tight text-slate-900 dark:text-white sm:text-base">
+                  OFFICIAL CSO OFFICERS ID 2025-2026
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section
         id="services"
         className="border-b border-slate-200/60 dark:border-neutral-900/60"
       >
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28 grid gap-10 md:grid-cols-5 relative">
-            <div className="md:col-span-2 space-y-4 md:sticky md:top-24 h-fit">
-              <h2 className="font-serif text-3xl font-light tracking-tight text-slate-900 dark:text-white md:text-4xl leading-tight">
-                Services & Expertise
-              </h2>
-              <p className="text-xs font-medium leading-relaxed text-slate-600 dark:text-neutral-500 max-w-xs">
-                A look at how I build web and mobile projects, from initial
-                design concepts through to final code.
-              </p>
-            </div>
+          <div className="md:col-span-2 space-y-4 md:sticky md:top-24 h-fit">
+            <h2 className="font-serif text-3xl font-light tracking-tight text-slate-900 dark:text-white md:text-4xl leading-tight">
+              Services & Expertise
+            </h2>
+            <p className="text-xs font-medium leading-relaxed text-slate-600 dark:text-neutral-500 max-w-xs">
+              A look at how I build web and mobile projects, from initial design
+              concepts through to final code.
+            </p>
+          </div>
 
           <div className="md:col-span-3 space-y-3">
             {services.map((srv) => {
