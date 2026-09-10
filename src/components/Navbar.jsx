@@ -1,5 +1,3 @@
-import imeLogo from "../assets/images/ImeLogo.png";
-
 function Navbar() {
   const links = ["Home", "Projects", "Services", "Contact"];
 
@@ -10,11 +8,9 @@ function Navbar() {
           href="#"
           className="transition-opacity hover:opacity-80 block focus:outline-none"
         >
-          <img
-            src={imeLogo}
-            alt="Ime Logo"
-            className="h-8 w-auto object-contain border-none outline-none drop-shadow-md"
-          />
+          <span className="block text-base font-black tracking-tight text-slate-900 dark:text-white sm:text-lg">
+            ime.
+          </span>
         </a>
 
         <nav className="flex items-center gap-4 sm:gap-6 md:gap-8">

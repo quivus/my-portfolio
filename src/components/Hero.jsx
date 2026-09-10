@@ -298,11 +298,9 @@ function Hero() {
                 Hi, I'm
               </span>
 
-              <img
-                src={imeLogo}
-                alt="Ime Logo"
-                className="w-full max-w-xs md:max-w-md h-50 object-contain mx-auto md:mx-0 drop-shadow-md "
-              />
+              <h1 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white sm:text-4xl md:text-5xl lg:text-6xl">
+                Rajiemae Villa
+              </h1>
 
               <h2 className="font-serif text-xl font-light tracking-[0.2em] uppercase text-slate-800 dark:text-neutral-200 md:text-2xl">
                 Frontend Developer
@@ -544,7 +542,7 @@ function Hero() {
               <div className="flex flex-1 items-center justify-center bg-slate-50/80 p-6 dark:bg-neutral-950/60">
                 <img
                   src={imeLogo}
-                  alt="Official Ime Logo"
+                  alt="Ime Logo"
                   className="h-36 w-auto max-w-full object-contain"
                 />
               </div>
