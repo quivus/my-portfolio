@@ -1,9 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SplashScreen from "./components/SplashScreen";
 import Home from "./components/Home";
 
 function App() {
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const stayHere = () => {
+      window.history.pushState({ quivus: true }, "", window.location.href);
+    };
+
+    stayHere();
+
+    const onPopState = () => {
+      stayHere();
+      window.location.reload();
+    };
+
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
 
   return (
     <>
