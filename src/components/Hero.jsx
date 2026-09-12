@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import profileImg from "../assets/images/profile.jpg";
-import imeLogo from "../assets/images/ImeLogo.png";
+import quivusLogo from "../assets/images/Quivus.png";
 import csoImage from "../assets/images/CSO.png";
 import clinicImage from "../assets/images/Clinic.png";
-import gratiImage from "../assets/images/Grati.png";
+import furlyImage from "../assets/images/Furly.png";
+import spaceExplorerImage from "../assets/images/SpaceExplorer.png";
 import idFrontImage from "../assets/images/ID_FRONT.png";
 import idBackImage from "../assets/images/ID_BACK.png";
 import csoVideo from "../assets/videos/CSOFinance.mp4";
-import gratitudeVideo from "../assets/videos/gratitudevideo.mp4";
+import furlyVideo from "../assets/videos/furlyreminder.mp4";
 
 const truncateText = (text, limit) => {
   if (text.length <= limit) return { short: text, rest: "" };
@@ -186,25 +187,6 @@ function Hero() {
   const works = [
     {
       id: "01",
-      title: "CSO Finance",
-      description:
-        "The Computer Studies Organization (CSO) Finance application is a personal project for the CSO at ACLC Mandaue. It is esigned for financial transparency and accountability, the system provides secure tools for officers to manage organizational funds. Key features include role-based access, a real-time dashboard, automated budget allocation, and strict expense tracking. Operating as an offline-first application with local data persistence, it allows users to prevent overdrafts and export detailed financial summaries.",
-      highlights: [
-        "Computer Studies Organization (CSO) Finance",
-        "personal project",
-        "financial transparency and accountability",
-        "role-based access, a real-time dashboard, automated budget allocation, and strict expense tracking.",
-        "offline-first application",
-      ],
-      tech: ["Flutter", "Dart"],
-      image: csoImage,
-      video: csoVideo,
-      apkUrl:
-        "https://drive.google.com/file/d/1KkeuRCZE9R4xRzZnnEu_jYGX4XQ0B7YY/view?usp=drive_link",
-      codeUrl: "https://github.com/quivus/cso-finance",
-    },
-    {
-      id: "02",
       title: "Patient Tracker System",
       description:
         "A 3rd-year capstone project for the school clinic at ACLC Mandaue. This multi-platform tool streamlines clinic operations by managing patient intake, medical records, and medicine inventory. By connecting web, mobile, and hardware, it ensures health data is captured quickly and provides a valid, digital form of medical documentation. The system helps students and nurses communicate effectively, keeping records organized while allowing staff to monitor clinic status, manage schedules, and respond to urgent health requests in real-time.",
@@ -241,24 +223,77 @@ function Hero() {
       codeUrl: "https://github.com/orgs/PatientsRecordandHistory/repositories",
     },
     {
-      id: "03",
-      title: "Gratitude Capsule",
+      id: "02",
+      title: "Space Explorer",
       description:
-        "It is a cross-platform application designed for writing personal notes, sealing them with a timer, and revealing them at a specific future date. It features synchronized cross-device access, allowing users to manage capsules across multiple devices under a single account. The system delivers an aesthetic, calming experience through real-time synchronization, live countdowns, and smooth unlock animations.",
+        "Space Explorer is an Expo (React Native) application built around NASA's Astronomy Picture of the Day. The interface covers a welcome orbit scene, Home, Gallery, Search, plate details, and a Saved vault, with Dark and Light appearance remembered after refresh. Home presents today’s APOD alongside recent nights, while Gallery and Search filter galaxies, nebulae, planets, Earth, and the Moon. Each plate opens credit, explanation, Keep / Share / Save actions, and neighboring nights.",
       highlights: [
-        "cross-platform application",
-        "sealing them with a timer",
-        "synchronized cross-device access",
-        "real-time synchronization",
-        "live countdowns",
-        "smooth unlock animations",
+        "Expo (React Native) application",
+        "NASA's Astronomy Picture of the Day",
+        "welcome orbit scene",
+        "Dark and Light appearance",
+        "galaxies, nebulae, planets, Earth, and the Moon",
+        "Keep / Share / Save",
       ],
-      tech: ["Flutter", "React", "Firebase", "Figma"],
-      image: gratiImage,
-      video: gratitudeVideo,
+      tech: [
+        "Expo",
+        "React Native",
+        "TypeScript",
+        "Expo Router",
+        "NASA APOD",
+      ],
+      image: spaceExplorerImage,
+      video: null,
+      lightPreview: true,
       websiteUrl: "",
       apkUrl: "",
-      codeUrl: "https://github.com/quivus/gratitude-capsule.git",
+      codeUrl: "https://github.com/quivus/space-explorer-app.git",
+    },
+    {
+      id: "03",
+      title: "Furly Reminder",
+      description:
+        "Furly Reminder is a static Expo Go application for household pet care. It helps an owner track feeding, water, play, and upcoming reminders across four pets (a dog, cat, parrot, and rabbit) using local sample data only. Daily care can be logged from a pet-specific dashboard, a photograph can be chosen from the device library, and reminder details open from Home or History. The project is a file-based Expo Router app with three tab screens, a nested detail view, and reusable custom components.",
+      highlights: [
+        "static Expo Go application",
+        "household pet care",
+        "feeding, water, play, and upcoming reminders",
+        "local sample data only",
+        "photograph can be chosen from the device library",
+        "three tab screens, a nested detail view",
+      ],
+      tech: [
+        "Expo",
+        "React Native",
+        "TypeScript",
+        "expo-router",
+        "expo-image-picker",
+      ],
+      image: furlyImage,
+      video: furlyVideo,
+      lightPreview: true,
+      websiteUrl: "",
+      apkUrl: "",
+      codeUrl: "https://github.com/quivus/furlyReminder.git",
+    },
+    {
+      id: "04",
+      title: "CSO Finance",
+      description:
+        "The Computer Studies Organization (CSO) Finance application is a personal project for the CSO at ACLC Mandaue. It is esigned for financial transparency and accountability, the system provides secure tools for officers to manage organizational funds. Key features include role-based access, a real-time dashboard, automated budget allocation, and strict expense tracking. Operating as an offline-first application with local data persistence, it allows users to prevent overdrafts and export detailed financial summaries.",
+      highlights: [
+        "Computer Studies Organization (CSO) Finance",
+        "personal project",
+        "financial transparency and accountability",
+        "role-based access, a real-time dashboard, automated budget allocation, and strict expense tracking.",
+        "offline-first application",
+      ],
+      tech: ["Flutter", "Dart"],
+      image: csoImage,
+      video: csoVideo,
+      apkUrl:
+        "https://drive.google.com/file/d/1KkeuRCZE9R4xRzZnnEu_jYGX4XQ0B7YY/view?usp=drive_link",
+      codeUrl: "https://github.com/quivus/cso-finance",
     },
   ];
 
@@ -273,7 +308,7 @@ function Hero() {
       id: "s2",
       title: "MOBILE DEVELOPMENT",
       desc: "Developing cross-platform mobile applications with smooth user interfaces and consistent performance across devices.",
-      tech: ["Flutter", "Dart"],
+      tech: ["Flutter", "Dart", "Expo", "React Native"],
     },
     {
       id: "s3",
@@ -363,14 +398,14 @@ function Hero() {
         id="projects"
         className="border-b border-slate-200/60 dark:border-neutral-900/60"
       >
-        <div className=" mx-auto max-w-6xl px-6 py-20 md:py-28">
+        <div className=" mx-auto max-w-6xl px-6 py-12 md:py-16">
           <div className="border-b border-slate-100 pb-4 dark:border-neutral-900/40">
             <h2 className="font-mono text-[10px] font-bold tracking-[0.3em] uppercase text-slate-400 dark:text-neutral-500">
               PROGRAMMING
             </h2>
           </div>
 
-          <div className="mt-1 grid grid-cols-1 gap-8 md:grid-cols-3 items-start">
+          <div className="mt-4 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {works.map((work) => {
               const isExpanded = !!expandedIds[work.id];
               const isPlaying = playingId === work.id;
@@ -383,15 +418,19 @@ function Hero() {
               return (
                 <div
                   key={work.id}
-                  className="group flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-shadow duration-300 hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-900"
+                  className="group flex h-full flex-col overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm transition-shadow duration-300 hover:shadow-md dark:border-neutral-800 dark:bg-neutral-900"
                 >
-                  <div className="relative">
+                  <div className="relative shrink-0">
                     <button
                       type="button"
                       onClick={() => work.video && togglePlay(work.id)}
-                      className={`relative flex aspect-video w-full items-center justify-center overflow-hidden bg-slate-50 dark:bg-neutral-900 ${
-                        work.video ? "cursor-pointer" : "cursor-default"
-                      }`}
+                      className={`relative flex aspect-[16/10] w-full items-center justify-center overflow-hidden ${
+                        isPlaying && work.video
+                          ? "bg-black"
+                          : work.lightPreview
+                            ? "bg-white"
+                            : "bg-slate-50 dark:bg-neutral-900"
+                      } ${work.video ? "cursor-pointer" : "cursor-default"}`}
                     >
                       {isPlaying && work.video ? (
                         <video
@@ -406,22 +445,25 @@ function Hero() {
                         <img
                           src={work.image}
                           alt={work.title}
-                          className="h-1/2 w-auto max-w-[45%] object-contain drop-shadow-sm transition-transform duration-500 group-hover:scale-105"
+                          className={`w-auto object-contain drop-shadow-sm transition-transform duration-500 group-hover:scale-105 ${
+                            work.lightPreview
+                              ? "h-[68%] max-w-[72%]"
+                              : "h-[46%] max-w-[42%]"
+                          }`}
                         />
                       )}
 
                       {work.video && !isPlaying && (
                         <span className="absolute inset-0 flex items-center justify-center bg-black/25 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/95 pl-0.5 text-red-600 shadow-lg">
-                            <PlayIcon />
+                          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/95 pl-0.5 text-red-600 shadow-lg">
+                            <PlayIcon className="h-4 w-4" />
                           </span>
                         </span>
                       )}
 
                       {!work.video && (
-                        <span className="absolute bottom-3 right-3 rounded-md bg-slate-900/70 px-2 py-1 font-mono text-[11px] font-bold tracking-wide text-white uppercase backdrop-blur-sm dark:bg-black/60">
-                          Due to the system's size and ongoing development, a
-                          video preview is unavailable.
+                        <span className="absolute bottom-2 right-2 max-w-[70%] rounded bg-slate-900/70 px-1.5 py-0.5 font-mono text-[8px] font-bold leading-tight tracking-wide text-white uppercase backdrop-blur-sm dark:bg-black/60">
+                          Video preview unavailable
                         </span>
                       )}
                     </button>
@@ -433,33 +475,39 @@ function Hero() {
                           e.stopPropagation();
                           openFullscreen(work);
                         }}
-                        className="absolute top-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1.5 font-mono text-[9px] font-bold tracking-wide text-white uppercase backdrop-blur-sm opacity-0 transition-opacity duration-300 group-hover:opacity-100 hover:bg-black/80"
+                        className="absolute top-2 right-2 inline-flex items-center gap-1 rounded-full bg-black/60 px-2 py-1 font-mono text-[8px] font-bold tracking-wide text-white uppercase backdrop-blur-sm opacity-0 transition-opacity duration-300 group-hover:opacity-100 hover:bg-black/80"
                       >
-                        <ExpandIcon className="h-3 w-3" />
-                        View Full Size
+                        <ExpandIcon className="h-2.5 w-2.5" />
+                        Full
                       </button>
                     )}
                   </div>
 
-                  <div className="flex flex-1 flex-col gap-4 p-6">
-                    <h3 className="font-serif text-xl font-semibold tracking-tight text-slate-900 dark:text-white">
+                  <div className="grid flex-1 grid-rows-[2.5rem_3.75rem_1.5rem_1rem_2rem] gap-2.5 p-3.5">
+                    <h3 className="line-clamp-2 font-serif text-base leading-5 font-semibold tracking-tight text-slate-900 dark:text-white">
                       {work.title}
                     </h3>
 
-                    <p className="text-sm leading-relaxed text-slate-600 dark:text-neutral-300">
+                    <p
+                      className={`text-xs leading-5 text-slate-600 dark:text-neutral-300 ${
+                        isExpanded
+                          ? "overflow-y-auto"
+                          : "line-clamp-3 overflow-hidden"
+                      }`}
+                    >
                       {renderHighlighted(short, work.highlights)}
                       {isExpanded && rest ? (
                         <> {renderHighlighted(rest, work.highlights)}</>
                       ) : null}
                     </p>
 
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex h-6 items-center gap-1.5 overflow-x-auto overflow-y-hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                       {visibleTech.map((techItem) => (
                         <span
                           key={techItem}
-                          className="inline-flex items-center gap-1.5 rounded-full border border-red-200/60 bg-red-50 px-3 py-1.5 font-mono text-[10px] font-semibold tracking-wide text-red-700 shadow-2xs dark:border-red-900/30 dark:bg-red-950/20 dark:text-red-400"
+                          className="inline-flex h-5 shrink-0 items-center gap-1 whitespace-nowrap rounded-full border border-red-200/60 bg-red-50 px-2 font-mono text-[9px] font-semibold tracking-wide text-red-700 shadow-2xs dark:border-red-900/30 dark:bg-red-950/20 dark:text-red-400"
                         >
-                          <span className="h-1.5 w-1.5 rounded-full bg-red-500 dark:bg-red-500"></span>
+                          <span className="h-1 w-1 rounded-full bg-red-500 dark:bg-red-500"></span>
                           {techItem}
                         </span>
                       ))}
@@ -467,36 +515,34 @@ function Hero() {
                         <button
                           type="button"
                           onClick={() => toggleDesc(work.id)}
-                          className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 font-mono text-[10px] font-semibold tracking-wide text-slate-500 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-400"
+                          className="inline-flex h-5 shrink-0 items-center whitespace-nowrap rounded-full border border-slate-200 bg-slate-50 px-2 font-mono text-[9px] font-semibold tracking-wide text-slate-500 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-400"
                         >
                           +{hiddenTechCount} more
                         </button>
                       )}
                     </div>
 
-                    {(rest || hiddenTechCount > 0) && (
-                      <button
-                        type="button"
-                        onClick={() => toggleDesc(work.id)}
-                        className="w-fit font-mono text-[10px] font-bold tracking-widest text-red-600 uppercase transition-colors hover:text-red-700 dark:text-red-500 dark:hover:text-red-400"
-                      >
-                        {isExpanded ? "View Less <" : "View All >"}
-                      </button>
-                    )}
+                    <div className="flex h-4 items-center">
+                      {(rest || hiddenTechCount > 0) && (
+                        <button
+                          type="button"
+                          onClick={() => toggleDesc(work.id)}
+                          className="font-mono text-[9px] font-bold tracking-widest text-red-600 uppercase transition-colors hover:text-red-700 dark:text-red-500 dark:hover:text-red-400"
+                        >
+                          {isExpanded ? "View Less <" : "View All >"}
+                        </button>
+                      )}
+                    </div>
 
-                    <div
-                      className={`mt-auto flex flex-wrap justify-content items-center gap-2 pt-2 ${
-                        !work.apkUrl && !work.websiteUrl ? "justify-center" : ""
-                      }`}
-                    >
+                    <div className="flex h-8 items-center gap-1.5">
                       {work.websiteUrl && (
                         <a
                           href={work.websiteUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="mx-auto inline-flex w-fit items-center gap-2 rounded-full bg-blue-600 px-5 py-2.5 font-mono text-[10px] font-bold tracking-[0.2em] text-white uppercase shadow-xs transition-all duration-300 hover:scale-[1.03] hover:bg-blue-700"
+                          className="inline-flex h-7 items-center gap-1.5 rounded-full bg-blue-600 px-3 font-mono text-[9px] font-bold tracking-[0.16em] text-white uppercase shadow-xs transition-all duration-300 hover:scale-[1.03] hover:bg-blue-700"
                         >
-                          <WebsiteIcon className="h-3.5 w-3.5" />
+                          <WebsiteIcon className="h-3 w-3" />
                           Visit Website
                         </a>
                       )}
@@ -505,20 +551,20 @@ function Hero() {
                           href={work.apkUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex w-fit items-center gap-2 rounded-full bg-green-600 px-5 py-2.5 font-mono text-[10px] font-bold tracking-[0.2em] text-white uppercase shadow-xs transition-all duration-300 hover:scale-[1.03] hover:bg-green-700"
+                          className="inline-flex h-7 items-center gap-1.5 rounded-full bg-green-600 px-3 font-mono text-[9px] font-bold tracking-[0.16em] text-white uppercase shadow-xs transition-all duration-300 hover:scale-[1.03] hover:bg-green-700"
                         >
-                          <DownloadIcon className="h-3.5 w-3.5" />
-                          Download APK
+                          <DownloadIcon className="h-3 w-3" />
+                          APK
                         </a>
                       )}
                       <a
                         href={work.codeUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 font-mono text-[10px] font-bold tracking-[0.2em] text-slate-700 uppercase shadow-xs transition-all duration-300 hover:scale-[1.03] hover:border-slate-900 hover:bg-slate-900 hover:text-white dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-300 dark:hover:border-white dark:hover:bg-white dark:hover:text-slate-900"
+                        className="inline-flex h-7 items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 font-mono text-[9px] font-bold tracking-[0.16em] text-slate-700 uppercase shadow-xs transition-all duration-300 hover:scale-[1.03] hover:border-slate-900 hover:bg-slate-900 hover:text-white dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-300 dark:hover:border-white dark:hover:bg-white dark:hover:text-slate-900"
                       >
-                        <GithubIcon className="h-3.5 w-3.5" />
-                        View Code
+                        <GithubIcon className="h-3 w-3" />
+                        Code
                       </a>
                     </div>
                   </div>
@@ -541,14 +587,14 @@ function Hero() {
             <div className="flex min-h-[320px] flex-col overflow-hidden rounded-2xl border border-slate-100 bg-slate-50/70 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
               <div className="flex flex-1 items-center justify-center bg-slate-50/80 p-6 dark:bg-neutral-950/60">
                 <img
-                  src={imeLogo}
-                  alt="Ime Logo"
-                  className="h-36 w-auto max-w-full object-contain"
+                  src={quivusLogo}
+                  alt="Quivus Logo"
+                  className="h-28 w-auto max-w-[90%] object-contain sm:h-32"
                 />
               </div>
               <div className="flex items-center p-6">
                 <h3 className="font-serif text-sm font-semibold tracking-tight text-slate-900 dark:text-white sm:text-base">
-                  OFFICIAL IME LOGO
+                  OFFICIAL QUIVUS LOGO
                 </h3>
               </div>
             </div>
@@ -683,7 +729,7 @@ function Hero() {
                 GET IN TOUCH
               </h2>
               <h3 className="font-serif text-3xl font-light tracking-tight text-slate-900 dark:text-white md:text-4xl">
-                Ime Listens. Ime Builds.
+                Quivus Listens. Quivus Builds.
               </h3>
             </div>
           </div>
