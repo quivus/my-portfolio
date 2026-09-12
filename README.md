@@ -1,71 +1,74 @@
-# Ime
+# Quivus
 
 A personal portfolio website, built to showcase software development projects, technical skills, and experiences. The site includes an animated splash screen, a sticky navigation bar, a project showcase with live demos and downloadable builds, and a downloadable CV.
 
-## Overview
+Live site: [https://vraj-quivus.vercel.app](https://vraj-quivus.vercel.app)
 
-The portfolio opens with a brief splash screen introduction before loading the main site. Visitors can browse featured projects, each presented with a media preview (image or video), a description, the technologies used, and links to the live application, downloadable APK, and source code where available.
+
 
 ## Features
 
-- Animated splash screen shown on initial load
-- Sticky, responsive navigation bar with section links (Home, Projects, Services, Contact)
-- Project showcase with independent expand/collapse behavior per project card
-- Inline video previews with a full-size viewing mode
-- Direct links to live websites, downloadable APK builds, and source code repositories
-- Downloadable CV (PDF)
-- Dark mode support (Adapts on system mode)
-- Built with React and Tailwind CSS
+| Feature | Description |
+| --- | --- |
+| Splash screen | Animated intro shown on first load before the main site appears |
+| Navigation | Sticky, responsive bar with Home, Projects, Services, and Contact |
+| Project cards | Independent expand and collapse for each project |
+| Media previews | Inline video playback with a full-size viewing mode |
+| Project links | Live sites, APK downloads, and source repositories |
+| CV | Downloadable PDF resume |
+| Theme | Follows the system light or dark preference |
+| Branding | Quivus logo used as the tab icon on the deployed site |
 
 ## Tech Stack
 
-- React
-- Tailwind CSS
-- JavaScript (JSX)
+| Area | Tool | Version |
+| --- | --- | --- |
+| UI library | React | 19 |
+| Styling | Tailwind CSS | 4 |
+| Bundler | Vite | 8 |
+| Language | JavaScript (JSX) | — |
+| Hosting | Vercel | [vraj-quivus.vercel.app](https://vraj-quivus.vercel.app) |
 
 ## Project Structure
 
-```
-ime-portfolio/
-├── public/
-│   └── cv.pdf
-├── src/
-│   ├── assets/
-│   │   ├── images/
-│   │   └── videos/
-│   ├── components/
-│   │   ├── SplashScreen.jsx
-│   │   ├── Navbar.jsx
-│   │   ├── Hero.jsx
-│   │   └── Home.jsx
-│   ├── App.jsx
-│   └── main.jsx
-├── package.json
-└── README.md
-```
+| Path | Role |
+| --- | --- |
+| `public/favicon.png` | Quivus tab icon |
+| `src/assets/images/` | Project stills and the Quivus wordmark |
+| `src/assets/videos/` | Inline project video previews |
+| `src/components/SplashScreen.jsx` | Opening animation |
+| `src/components/Navbar.jsx` | Sticky section navigation |
+| `src/components/Hero.jsx` | Home, projects, services, and contact |
+| `src/components/Home.jsx` | Page layout that composes navbar, hero, and footer |
+| `src/App.jsx` | Splash gate and history handling |
+| `src/main.jsx` | React entry point |
+| `index.html` | Document shell (local title: Rajiemae Villa) |
+
+## Scripts
+
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the local Vite server |
+| `npm run build` | Create a production build |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js (v18 or later recommended)
-- npm or yarn
-
-### Installation
+| Requirement | Notes |
+| --- | --- |
+| Node.js | v18 or later |
+| Package manager | npm or yarn |
 
 ```bash
-git clone https://github.com/quivus/Ime.git
-cd ime
+git clone https://github.com/quivus/my-portfolio.git
+cd my-portfolio
 npm install
 ```
-
-### Running Locally
 
 ```bash
 npm run dev
 ```
-
-### Building for Production
 
 ```bash
 npm run build
