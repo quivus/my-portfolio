@@ -1,16 +1,30 @@
+import quivusLogo from "../assets/images/Quivus.png";
+
 function Navbar() {
   const links = ["Home", "Projects", "Services", "Contact"];
+
+  const goTo = (id) => (event) => {
+    event.preventDefault();
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+    window.history.replaceState({ quivus: true }, "", `#${id}`);
+  };
 
   return (
     <header className="sticky top-0 z-40 w-full px-4 sm:px-6 md:px-8 pt-5 backdrop-blur-sm bg-white/70 dark:bg-neutral-950/70 transition-colors duration-300">
       <div className="mx-auto flex max-w-5xl items-center justify-between border-b border-slate-100 pb-4 dark:border-neutral-900/60">
         <a
-          href="#"
-          className="transition-opacity hover:opacity-80 block focus:outline-none"
+          href="#home"
+          onClick={goTo("home")}
+          className="flex shrink-0 items-center transition-opacity hover:opacity-80 focus:outline-none"
         >
-          <span className="block text-base font-black tracking-tight text-slate-900 dark:text-white sm:text-lg">
-            ime.
-          </span>
+          <img
+            src={quivusLogo}
+            alt="Quivus"
+            className="h-8 w-auto object-contain sm:h-9"
+          />
         </a>
 
         <nav className="flex items-center gap-4 sm:gap-6 md:gap-8">
@@ -18,6 +32,7 @@ function Navbar() {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
+              onClick={goTo(item.toLowerCase())}
               className="group relative block py-1 font-mono text-[11px] sm:text-xs font-semibold tracking-widest uppercase bg-linear-to-r from-red-600 to-red-600 dark:from-red-500 dark:to-red-500 bg-size-[0%_100%] bg-left bg-no-repeat bg-clip-text text-slate-500 transition-all duration-500 hover:bg-size-[100%_100%] hover:text-transparent dark:text-neutral-400 focus:outline-none"
             >
               {item}
