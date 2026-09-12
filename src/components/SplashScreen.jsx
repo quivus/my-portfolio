@@ -25,8 +25,8 @@ function SplashScreen({ onComplete }) {
           isSliding ? "-translate-x-full" : "translate-x-0"
         }`}
       >
-        <h1 className="text-5xl font-black tracking-tighter text-red-700 md:text-7xl">
-          IME'S
+        <h1 className="text-4xl font-black tracking-tighter text-red-700 sm:text-5xl md:text-7xl">
+          QUIVUS
         </h1>
       </div>
 
